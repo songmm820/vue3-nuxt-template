@@ -1,7 +1,16 @@
+import tailwindcss from "@tailwindcss/vite";
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   compatibilityDate: "2025-05-15",
-  devtools: { enabled: true },
+  devtools: { enabled: false },
+  vite: {
+    plugins: [tailwindcss()],
+  },
+  typescript: {
+    typeCheck: true,
+  },
+  css: ["~/assets/css/main.css"],
   app: {
     head: {
       title: "Nuxt 3 Starter",
@@ -13,8 +22,6 @@ export default defineNuxtConfig({
     },
   },
   runtimeConfig: {
-    // 仅在服务器端可用的私有键
-    apiSecret: "test",
     // public 中的键也会暴露到客户端
     public: {
       apiBase: "/api",
