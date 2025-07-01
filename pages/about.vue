@@ -8,12 +8,5 @@
 <script lang="ts" setup>
 useHead({
   title: 'About',
-  meta: [
-    {
-      name: 'description',
-      content: 'About page',
-    },
-  ],
-  script: [{ innerHTML: 'console.log(\'Hello world\')' }],
 })
 </script>

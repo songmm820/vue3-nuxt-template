@@ -7,6 +7,10 @@
 
 <script lang="ts" setup>
 const runtimeConfig = useRuntimeConfig()
+
+useHead({
+  title: '首页',
+})
 </script>
 
 <style lang="scss" scoped>
