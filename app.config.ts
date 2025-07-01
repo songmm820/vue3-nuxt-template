@@ -5,4 +5,11 @@ export default defineAppConfig({
       primary: '#ff0000',
     },
   },
+  ui: {
+    button: {
+      defaultVariants: {
+        size: 'sm',
+      },
+    },
+  },
 })

@@ -7,6 +7,9 @@ export default defineNuxtConfig({
   devtools: { enabled: false },
 
   app: {
+    rootAttrs: {
+      id: '__nuxt',
+    },
     head: {
       htmlAttrs: {
         lang: 'en',
@@ -14,10 +17,12 @@ export default defineNuxtConfig({
       charset: 'utf-16',
       viewport: 'width=device-width, initial-scale=1, maximum-scale=1',
     },
-    pageTransition: { name: 'page', mode: 'out-in' },
   },
 
   css: ['~/assets/css/main.css'],
+  ui: {
+    fonts: false,
+  },
 
   runtimeConfig: {
     // public 中的键也会暴露到客户端

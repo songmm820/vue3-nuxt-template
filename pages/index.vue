@@ -3,6 +3,8 @@
     <h1>首页 {{ runtimeConfig.public.apiBase }}</h1>
     <NuxtLink to="/about">关于页面</NuxtLink>
   </div>
+
+  <UButton>按钮</UButton>
 </template>
 
 <script lang="ts" setup>
@@ -15,6 +17,5 @@ useHead({
 
 <style lang="scss" scoped>
 .container {
-  background: red;
 }
 </style>
