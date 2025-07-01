@@ -4,15 +4,16 @@
     <NuxtLink to="/">首页</NuxtLink>
   </div>
 </template>
+
 <script lang="ts" setup>
 useHead({
-  title: "About",
+  title: 'About',
   meta: [
     {
-      name: "description",
-      content: "About page",
+      name: 'description',
+      content: 'About page',
     },
   ],
-  script: [{ innerHTML: "console.log('Hello world')" }],
-});
+  script: [{ innerHTML: 'console.log(\'Hello world\')' }],
+})
 </script>

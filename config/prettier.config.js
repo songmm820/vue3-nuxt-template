@@ -19,5 +19,5 @@ export default {
   // 对象字面量中括号之间的空格<bool>，默认true
   bracketSpacing: true,
   // Prettier可以在文件的顶部插入一个 @format的特殊注释，以表明改文件已经被Prettier格式化过了。在使用 --require-pragma参数处理一连串的文件时这个功能将十分有用。如果文件顶部已经有一个doclock，这个选项将新建一行注释，并打上@format标记<bool>，默认false
-  insertPragma: false
+  insertPragma: false,
 }

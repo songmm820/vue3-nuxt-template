@@ -4,9 +4,11 @@
     <NuxtLink to="/about">关于页面</NuxtLink>
   </div>
 </template>
+
 <script lang="ts" setup>
-const runtimeConfig = useRuntimeConfig();
+const runtimeConfig = useRuntimeConfig()
 </script>
+
 <style lang="scss" scoped>
 .container {
   background: red;
