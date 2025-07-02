@@ -30,6 +30,9 @@ export default defineNuxtConfig({
       apiBase: '/api',
     },
   },
+  devServer: {
+    port: 5777,
+  },
 
   compatibilityDate: '2025-05-15',
 

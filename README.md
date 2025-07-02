@@ -11,6 +11,7 @@
 ├── server                # 服务器端相关的文件 
 │   ├── api               # API 路由（用于 Server-side 功能） 
 │   └── middleware        # 服务器端中间件 
+├── utils                # 存放工具函数 
 ├── nuxt.config.ts        # Nuxt 配置文件（TypeScript 格式） 
 ├── package.json          # 项目依赖与配置信息 
 └── tsconfig.json         # TypeScript 配置文件 
