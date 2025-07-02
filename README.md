@@ -1,75 +1,17 @@
-# Nuxt Minimal Starter
-
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
-
-## Setup
-
-Make sure to install dependencies:
-
-```bash
-# npm
-npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+# vue3-nuxt-template
+<pre>
+├── assets                # 存放静态资源，如样式、图片、字体等
+├── composables           # 存放组合式 API 相关的逻辑
+├── layouts               # 页面布局组件，默认布局为 `default.vue`
+├── middleware            # 存放路由中间件，用于处理路由守卫等 
+├── pages                 # 页面组件，按文件结构自动生成路由 
+├── plugins               # 插件文件，用于扩展 Nuxt 的功能 
+├── components            # 存放 Vue 组件
+├── public                # 存放静态文件，直接通过 URL 访问 
+├── server                # 服务器端相关的文件 
+│   ├── api               # API 路由（用于 Server-side 功能） 
+│   └── middleware        # 服务器端中间件 
+├── nuxt.config.ts        # Nuxt 配置文件（TypeScript 格式） 
+├── package.json          # 项目依赖与配置信息 
+└── tsconfig.json         # TypeScript 配置文件 
+</pre>
