@@ -3,7 +3,7 @@ import tailwindcss from '@tailwindcss/vite'
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
 
-  modules: ['@nuxt/eslint', '@nuxt/ui'],
+  modules: ['@nuxt/eslint', '@nuxt/ui', '@nuxtjs/i18n'],
   devtools: { enabled: false },
 
   app: {
@@ -43,5 +43,18 @@ export default defineNuxtConfig({
     config: {
       stylistic: true,
     },
+  },
+  i18n: {
+    // Module Options
+    defaultLocale: 'en',
+    lazy: true,
+    // 路由语言前缀 no_prefix | prefix | prefix_except_default | prefix_and_default
+    strategy: 'no_prefix',
+    // Global transition
+    baseUrl: 'https://my-nuxt-app.com',
+    locales: [
+      { code: 'en', name: 'English', file: 'en.json' },
+      { code: 'zh', name: '中文简体', file: 'zh.json' },
+    ],
   },
 })
