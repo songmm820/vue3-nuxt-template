@@ -3,7 +3,7 @@
     <h1>首页 {{ runtimeConfig.public.apiBase }}</h1>
     <NuxtLink to="/about">关于页面</NuxtLink>
 
-    <div>
+    <div class="flex gap-2">
       <UButton
         v-for="locale in locales"
         :key="locale.code"

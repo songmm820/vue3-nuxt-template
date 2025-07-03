@@ -3,7 +3,7 @@ import withNuxt from './.nuxt/eslint.config.mjs'
 
 export default withNuxt(
   {
-    files: ['pages/**/*.vue', 'layouts/**/*.vue'],
+    files: ['pages/**/*.vue', 'layouts/**/*.vue', 'components/**/*.vue'],
     rules: {
       // 允许在 Vue 组件中定义多个根元素
       'vue/no-multiple-template-root': ['off'],
