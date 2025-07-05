@@ -1,5 +1,6 @@
 # vue3-nuxt-template
 <pre>
+├── app                   # app 相关配置
 ├── assets                # 存放静态资源，如样式、图片、字体等
 ├── composables           # 存放组合式 API 相关的逻辑
 ├── layouts               # 页面布局组件，默认布局为 `default.vue`

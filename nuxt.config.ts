@@ -1,9 +1,11 @@
 import tailwindcss from '@tailwindcss/vite'
+import { defineNuxtConfig } from 'nuxt/config'
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
 
-  modules: ['@nuxt/eslint', '@nuxt/ui', '@nuxtjs/i18n'],
+  modules: ['@nuxt/eslint', '@nuxt/ui', '@nuxtjs/i18n', '@nuxt/image'],
+  $development: undefined, $env: undefined, $meta: undefined, $production: undefined, $test: undefined,
   devtools: { enabled: false },
 
   app: {
@@ -16,10 +18,21 @@ export default defineNuxtConfig({
       },
       charset: 'utf-16',
       viewport: 'width=device-width, initial-scale=1, maximum-scale=1',
+      link: [
+        // 设置 favicon
+        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      ],
     },
   },
 
   css: ['~/assets/css/main.css'],
+
+  router: {
+    options: {
+      hashMode: true,
+    },
+  },
+
   ui: {
     fonts: false,
   },
@@ -56,5 +69,8 @@ export default defineNuxtConfig({
       { code: 'en', name: 'English', file: 'en.json' },
       { code: 'zh', name: '中文简体', file: 'zh.json' },
     ],
+  },
+
+  image: {
   },
 })
