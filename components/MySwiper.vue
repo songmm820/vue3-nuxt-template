@@ -1,19 +1,17 @@
 <template>
   <!--     :autoplay="{ delay: 2500 }" -->
-  <Swiper
-    :slides-per-view="1"
-    :space-between="50"
-    :loop="true"
-    :modules="[Autoplay]"
-  >
+  <Swiper :slides-per-view="1" :space-between="50" :loop="true" :modules="[Autoplay]">
     <SwiperSlide
-      v-for="(item, index) in props.swiperList" v-slot="{ isActive }"
-      :key="index"
+      v-for="(item, index) in props.swiperList" v-slot="{ isActive }" :key="index"
     >
-      <div class="relative">
+      <div class="my-swiper-wrapper">
         <img class="swiper-img" :src="item.src" :alt="item.alt">
-        <div>LeftBtn</div>
-        <div>RightBtn</div>
+        <div class="swiper-left__btn" @click.stop="handleSwiperBtn('left')">
+          &lt;
+        </div>
+        <div class="swiper-right__btn" @click.stop="handleSwiperBtn('right')">
+          &gt;
+        </div>
       </div>
     </SwiperSlide>
   </Swiper>
@@ -40,12 +38,41 @@ export type SwiperList = {
 const props = defineProps<{
   swiperList: SwiperList[]
 }>()
+
+/**
+ * 轮播图按钮点击事件
+ */
+function handleSwiperBtn(direction: 'left' | 'right') {
+  // console.log(direction)
+
+}
 </script>
 
 <style lang="scss" scoped>
-.swiper-img {
-  width: 100%;
-  height:auto;
-  cursor: pointer;
+.my-swiper-wrapper {
+  position: relative;
+  .swiper-img {
+    width: 100%;
+    height:auto;
+    cursor: pointer;
+  }
+  /* swiper btn */
+  @mixin my-swiper-btn-style {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 100px;
+    color: #fff;
+
+  }
+  .swiper-left__btn {
+    @include my-swiper-btn-style;
+    left: 100px;
+  }
+  .swiper-right__btn {
+    @include my-swiper-btn-style;
+    right: 100px;
+  }
 }
 </style>
