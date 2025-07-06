@@ -10,7 +10,7 @@
           &lt;
         </div>
         <div class="swiper-right__btn" @click.stop="handleSwiperBtn('right')">
-          &gt;
+          <UIcon name="i-lucide-lightbulb" class="size-5" />
         </div>
       </div>
     </SwiperSlide>

@@ -20,7 +20,7 @@ export default defineNuxtConfig({
       viewport: 'width=device-width, initial-scale=1, maximum-scale=1',
       link: [
         // 设置 favicon
-        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+        { rel: 'icon', type: 'image/x-icons', href: '/favicon.ico' },
       ],
     },
   },
