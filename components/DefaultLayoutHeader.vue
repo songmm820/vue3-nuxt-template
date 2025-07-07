@@ -17,7 +17,6 @@
 
 <script setup lang="ts">
 import type { CSSProperties } from 'vue'
-import { debounce } from 'lodash'
 
 type MenuItem = {
   name: string
@@ -77,17 +76,12 @@ function handleScroll() {
   }
 }
 
-/**
- * 防抖处理，防止频繁触发handleScroll函数
- */
-const debounceHandleScroll = debounce(handleScroll, 100)
-
 onMounted(() => {
-  window.addEventListener('scroll', debounceHandleScroll)
+  window.addEventListener('scroll', handleScroll)
 })
 
 onBeforeUnmount(() => {
-  window.removeEventListener('scroll', debounceHandleScroll)
+  window.removeEventListener('scroll', handleScroll)
 })
 </script>
 

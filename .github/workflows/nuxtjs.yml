@@ -40,8 +40,8 @@ jobs:
       - name: Detect package manager 【检查包管理器】
         id: detect-package-manager
         run: |
-          if [ -f "${{ github.workspace }}/pnpm-lock.yaml" ]; then
-            echo "manager=pnpm" >> $GITHUB_OUTPUT
+          if [ -f "${{ github.workspace }}/yarn-lock.yaml" ]; then
+            echo "manager=yarn" >> $GITHUB_OUTPUT
             echo "command=install" >> $GITHUB_OUTPUT
             exit 0
           elif [ -f "${{ github.workspace }}/package.json" ]; then
@@ -59,8 +59,8 @@ jobs:
           node-version: 20
           cache: 'npm'
 
-      - name:  Install pnpm 【安装 pnpm 包管理工具】
-        run: npm install -g pnpm # 安装pnpm
+      - name:  Install yarn 【安装 yarn 包管理工具】
+        run: npm install -g yarn # 安装yarn
 
       - name: Setup Pages 【配置 GitHub Pages 部署环境】
         uses: actions/configure-pages@v5
@@ -82,10 +82,13 @@ jobs:
             ${{ runner.os }}-nuxt-build-
 
       - name: Install Dependencies 【安装依赖】
-        run: pnpm install
+        run: yarn install
 
-      - name: Static HTML export with Nuxt 【使用Nuxt导出静态HTML】
-        run: pnpm build
+      - name: Build Static HTML export with Nuxt 【使用Nuxt生成静态HTML】
+        run: yarn generate
+        
+      - name: Static HTML export with Nuxt 【构建Nuxt产物】
+        run: yarn build
 
       - name: Upload artifact 【上传构建产物】
         uses: actions/upload-pages-artifact@v3
