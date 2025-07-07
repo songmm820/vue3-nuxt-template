@@ -12,6 +12,7 @@ export default defineNuxtConfig({
     rootAttrs: {
       id: '__nuxt',
     },
+    layoutTransition: { name: 'layout', mode: 'out-in' },
     head: {
       htmlAttrs: {
         lang: 'en',
