@@ -54,8 +54,8 @@ jobs:
       - name: Setup Node 【安装 Node.js 环境，并缓存包管理器依赖】
         uses: actions/setup-node@v4
         with:
-          node-version: "20"
-          cache: ${{ steps.detect-package-manager.outputs.manager }}
+          node-version: 20
+          cache: 'pnpm'
       - name:  Install pnpm 【安装 pnpm 包管理工具】
         run: npm install -g pnpm # 安装pnpm
       - name: Setup Pages 【配置 GitHub Pages 部署环境】
