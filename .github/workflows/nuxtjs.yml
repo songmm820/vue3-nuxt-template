@@ -2,7 +2,7 @@
 #
 # To get started with Nuxt see: https://nuxtjs.org/docs/get-started/installation
 #
-name: Deploy Nuxt site to Pages
+name: Nuxt Deploy to GitHub Pages
 
 on:
   # Runs on pushes targeting the default branch
@@ -34,7 +34,7 @@ jobs:
       - name: Detect package manager 【检查包管理器】
         id: detect-package-manager
         run: |
-          if [ -f "${{ github.workspace }}/pnpm-lock.lock" ]; then
+          if [ -f "${{ github.workspace }}/pnpm-lock.yaml" ]; then
             echo "manager=pnpm" >> $GITHUB_OUTPUT
             echo "command=install" >> $GITHUB_OUTPUT
             exit 0
