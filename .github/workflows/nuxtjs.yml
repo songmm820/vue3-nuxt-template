@@ -14,22 +14,27 @@ on:
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
+  # 允许读取代码仓库的内容
   contents: read
+  # 允许推送构建产物到 GitHub Pages
   pages: write
+  # 允许为 CI 流程生成和签署身份验证 token
   id-token: write
 
 # Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
 # However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
 concurrency:
+  # 允许针对 GitHub Pages 设置一个组
   group: "pages"
+  # 禁用取消正在进行的部署。这意味着如果一个部署正在进行，其他的部署请求会排队，直到当前部署完成
   cancel-in-progress: false
 
 jobs:
-  # Build job
+  # Build job 构建作业
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository code 【检出仓库代码】
+      - name: Checkout repository code 【检出仓库代码，拉取最新代码】
         uses: actions/checkout@v4
       - name: Detect package manager 【检查包管理器】
         id: detect-package-manager
@@ -46,12 +51,14 @@ jobs:
             echo "Unable to determine package manager 【无法确定包管理器】"
             exit 1
           fi
-      - name: Setup Node 【安装NodeJs运行环境】
+      - name: Setup Node 【安装 Node.js 环境，并缓存包管理器依赖】
         uses: actions/setup-node@v4
         with:
           node-version: "20"
           cache: ${{ steps.detect-package-manager.outputs.manager }}
-      - name: Setup Pages 【设置站点Pages】
+      - name:  Install pnpm 【安装 pnpm 包管理工具】
+        run: npm install -g pnpm # 安装pnpm
+      - name: Setup Pages 【配置 GitHub Pages 部署环境】
         uses: actions/configure-pages@v5
         with:
           # Automatically inject router.base in your Nuxt configuration file and set
@@ -59,7 +66,7 @@ jobs:
           #
           # You may remove this line if you want to manage the configuration yourself.
           static_site_generator: nuxt
-      - name: Restore cache 【恢复缓存】
+      - name: Restore cache 【恢复缓存，以加速构建过程】
         uses: actions/cache@v4
         with:
           path: |
@@ -85,6 +92,6 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
-      - name: Deploy to GitHub Pages
+      - name: Deploy to GitHub Pages 【部署作业】
         id: deployment
         uses: actions/deploy-pages@v4
