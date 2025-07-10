@@ -7,7 +7,7 @@ name: Nuxt Deploy to GitHub Pages
 on:
   # Runs on pushes targeting the default branch
   push:
-    branches: ["master"]
+    branches: ['master']
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -25,7 +25,7 @@ permissions:
 # However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
 concurrency:
   # 允许针对 GitHub Pages 设置一个组
-  group: "pages"
+  group: 'pages'
   # 禁用取消正在进行的部署。这意味着如果一个部署正在进行，其他的部署请求会排队，直到当前部署完成
   cancel-in-progress: false
 
@@ -59,7 +59,7 @@ jobs:
           node-version: 20
           cache: 'npm'
 
-      - name:  Install yarn 【安装 yarn 包管理工具】
+      - name: Install yarn 【安装 yarn 包管理工具】
         run: npm install -g yarn # 安装yarn
 
       - name: Setup Pages 【配置 GitHub Pages 部署环境】
@@ -86,7 +86,7 @@ jobs:
 
       - name: Build Static HTML export with Nuxt 【使用Nuxt生成静态HTML】
         run: yarn generate
-        
+
       - name: Static HTML export with Nuxt 【构建Nuxt产物】
         run: yarn build
 

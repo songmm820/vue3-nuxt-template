@@ -1,4 +1,5 @@
 # vue3-nuxt-template
+
 <pre>
 ├── app                   # app 相关配置
 ├── assets                # 存放静态资源，如样式、图片、字体等

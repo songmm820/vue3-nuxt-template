@@ -2,7 +2,7 @@
   <div class="flex flex-col h-screen">
     <DefaultLayoutHeader />
     <main class="flex-1">
-      <slot />
+      <slot></slot>
     </main>
     <DefaultLayoutFooter />
   </div>

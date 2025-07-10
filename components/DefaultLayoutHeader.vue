@@ -70,8 +70,7 @@ function handleScroll() {
   if (window.scrollY > 0) {
     headerStyle.value.backgroundColor = 'rgba(0, 0, 0, 0.75)'
     headerStyle.value.backdropFilter = 'blur(8px)'
-  }
-  else {
+  } else {
     headerStyle.value.backgroundColor = 'transparent'
   }
 }
@@ -89,7 +88,7 @@ onBeforeUnmount(() => {
 .my-header {
   height: 65px;
   padding: 0 15px;
-  transition: background-color .5s ease;
+  transition: background-color 0.5s ease;
   position: fixed;
   top: 0;
   z-index: 99;
@@ -99,7 +98,7 @@ onBeforeUnmount(() => {
     .menu__list__item {
       color: #fff;
       font-size: 14px;
-      transition: color .2s ease;
+      transition: color 0.2s ease;
       font-weight: 500;
       &:hover {
         color: #ff6900;

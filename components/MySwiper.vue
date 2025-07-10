@@ -1,11 +1,18 @@
 <template>
-  <!--     :autoplay="{ delay: 2500 }" -->
-  <Swiper :slides-per-view="1" :space-between="50" :loop="true" :modules="[Autoplay]">
+  <Swiper
+    :slides-per-view="1"
+    :space-between="50"
+    :loop="true"
+    :autoplay="{ delay: 2500 }"
+    :modules="[Autoplay]"
+  >
     <SwiperSlide
-      v-for="(item, index) in props.swiperList" v-slot="{ isActive }" :key="index"
+      v-for="(item, index) in props.swiperList"
+      v-slot="{ isActive }"
+      :key="index"
     >
       <div class="my-swiper-wrapper">
-        <img class="swiper-img" :src="item.src" :alt="item.alt">
+        <img class="swiper-img" :src="item.src" :alt="item.alt" />
         <div class="swiper-left__btn" @click.stop="handleSwiperBtn('left')">
           &lt;
         </div>
@@ -44,7 +51,6 @@ const props = defineProps<{
  */
 function handleSwiperBtn(direction: 'left' | 'right') {
   // console.log(direction)
-
 }
 </script>
 
@@ -53,7 +59,7 @@ function handleSwiperBtn(direction: 'left' | 'right') {
   position: relative;
   .swiper-img {
     width: 100%;
-    height:auto;
+    height: auto;
     cursor: pointer;
   }
   /* swiper btn */
@@ -64,7 +70,6 @@ function handleSwiperBtn(direction: 'left' | 'right') {
     cursor: pointer;
     font-size: 100px;
     color: #fff;
-
   }
   .swiper-left__btn {
     @include my-swiper-btn-style;
