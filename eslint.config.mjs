@@ -1,4 +1,5 @@
 // @ts-check
+
 import withNuxt from './.nuxt/eslint.config.mjs'
 
 export default withNuxt({
@@ -16,6 +17,12 @@ export default withNuxt({
     'vue/first-attribute-linebreak': ['off'],
     // 强制在多行元素的内容之前和之后使用换行符
     'vue/multiline-html-element-content-newline': ['off'],
+    // if/else 语句的代码格式 1tbs | stroustrup
+    '@stylistic/brace-style': [
+      'error',
+      'stroustrup',
+      { allowSingleLine: true },
+    ],
     // 禁止在 Vue 组件中使用自闭合标签
     'vue/html-self-closing': [
       'error',

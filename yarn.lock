@@ -2618,7 +2618,7 @@
   resolved "https://registry.npmmirror.com/@vue/shared/-/shared-3.5.17.tgz#e8b3a41f0be76499882a89e8ed40d86a70fa4b70"
   integrity sha512-CabR+UN630VnsJO/jHWYBC1YVXyMq94KKp6iF5MQgZJs5I8cmjw6oVMO1oDbtBkENSHSSn/UadWlW/OAgdmKrg==
 
-"@vueuse/core@13.5.0", "@vueuse/core@^13.4.0":
+"@vueuse/core@13.5.0", "@vueuse/core@^13.4.0", "@vueuse/core@^13.5.0":
   version "13.5.0"
   resolved "https://registry.npmmirror.com/@vueuse/core/-/core-13.5.0.tgz#1136d3db088945d7b7a2397170737d5a3e557b36"
   integrity sha512-wV7z0eUpifKmvmN78UBZX8T7lMW53Nrk6JP5+6hbzrB9+cJ3jr//hUlhl9TZO/03bUkMK6gGkQpqOPWoabr72g==
@@ -2669,6 +2669,16 @@
   version "13.5.0"
   resolved "https://registry.npmmirror.com/@vueuse/metadata/-/metadata-13.5.0.tgz#18c24a32489b0a4fb9d7436efc048e836bfc4799"
   integrity sha512-euhItU3b0SqXxSy8u1XHxUCdQ8M++bsRs+TYhOLDU/OykS7KvJnyIFfep0XM5WjIFry9uAPlVSjmVHiqeshmkw==
+
+"@vueuse/nuxt@^13.5.0":
+  version "13.5.0"
+  resolved "https://registry.npmmirror.com/@vueuse/nuxt/-/nuxt-13.5.0.tgz#3f0bfd50a6572d69d15b0cc07c03e3364d49ad6d"
+  integrity sha512-TePmrPlTSTUc9zN0EHu45e6m5UARX3zDy6bSmF47hzbIuqVMG+Vc7ColLA50VZaTNsSdgYc3/Bq3VfYcUEnaEg==
+  dependencies:
+    "@nuxt/kit" "^3.17.6"
+    "@vueuse/core" "13.5.0"
+    "@vueuse/metadata" "13.5.0"
+    local-pkg "^1.1.1"
 
 "@vueuse/shared@10.11.1":
   version "10.11.1"
@@ -6635,11 +6645,6 @@ prelude-ls@^1.2.1:
   version "1.2.1"
   resolved "https://registry.npmmirror.com/prelude-ls/-/prelude-ls-1.2.1.tgz#debc6489d7a6e6b0e7611888cec880337d316396"
   integrity sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==
-
-prettier@3.6.2:
-  version "3.6.2"
-  resolved "https://registry.npmmirror.com/prettier/-/prettier-3.6.2.tgz#ccda02a1003ebbb2bfda6f83a074978f608b9393"
-  integrity sha512-I7AIg5boAr5R0FFtJ6rCfD+LFsWHp81dolrFD8S79U9tb8Az2nGrJncnMSnys+bpQJfRUzqs9hnA81OAA3hCuQ==
 
 pretty-bytes@^6.1.1:
   version "6.1.1"

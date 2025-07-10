@@ -1,8 +1,0 @@
-# 设置每个缩进级别的空格数，2 表示每一级缩进为 2 个空格
-tabWidth: 2
-# 设置是否在语句的结尾加分号，false 表示不加分号
-semi: false
-# 使用单引号代替双引号
-singleQuote: true
-# 当对象的属性名需要引号时，要求引号保持一致
-quoteProps: "consistent"

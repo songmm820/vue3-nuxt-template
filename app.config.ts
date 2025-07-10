@@ -5,6 +5,10 @@ export default defineAppConfig({
       primary: '#ff0000',
     },
   },
+  icon: {
+    mode: 'css',
+    cssLayer: 'base',
+  },
   ui: {
     button: {
       defaultVariants: {
